@@ -36,7 +36,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('acl_manager')
-                    ->treatNullLike('problematic.acl_manager')
+                    ->treatNullLike('oneup_acl.manager')
                 ->end()
                 ->arrayNode('resources')->prototype('scalar')->end()->end()
             ->end()

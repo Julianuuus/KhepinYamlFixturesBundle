@@ -9,7 +9,7 @@ class YamlFixturesPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        if (!$container->has('problematic.acl_manager')) {
+        if (!$container->has('oneup_acl.manager')) {
             return;
         }
         // If there was a call registered to set the acl manager, we can now
@@ -17,7 +17,7 @@ class YamlFixturesPass implements CompilerPassInterface
         $definition = $container->getDefinition('khepin.yaml_loader');
         if ($definition->hasMethodCall('setAclManager')) {
             $definition->removeMethodCall('setAclManager');
-            $definition->addMethodCall('setAclManager', array(new Reference('problematic.acl_manager')));
+            $definition->addMethodCall('setAclManager', array(new Reference('oneup_acl.manager')));
         }
     }
 }

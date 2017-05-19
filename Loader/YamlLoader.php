@@ -24,7 +24,7 @@ class YamlLoader
      */
     protected $object_manager;
     /**
-     * @var null|Problematic\AclManagerBundle\Domain\AclManager
+     * @var null|Oneup\AclBundle\Security\Acl\Manager\AclManager
      */
     protected $acl_manager = null;
 
@@ -56,7 +56,7 @@ class YamlLoader
 
     /**
      *
-     * @param Problematic\AclManagerBundle\Model\AclManagerInterface $manager
+     * @param Oneup\AclBundle\Security\Acl\Manager\AclManager $manager
      */
     public function setAclManager($manager = null)
     {

@@ -277,7 +277,7 @@ If you need to set ACL entries on your fixtures, it is possible. The ACLs are
 created after all fixtures have been saved so that there is no possible conflict.
 
 To set ACLs for the fixtures, you need to be using
-[ProblematicAclManagerBundle](problematic/ProblematicAclManagerBundle).
+[OneupAclBundle](1up-lab/OneupAclBundle).
 
 And to update your configuratin as follows:
 

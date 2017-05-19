@@ -3,7 +3,7 @@
 namespace Khepin\YamlFixturesBundle\Fixture;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use Problematic\AclManagerBundle\Model\AclManagerInterface;
+use Oneup\AclBundle\Security\Acl\Manager\AclManager;
 
 class YamlAclFixture extends AbstractFixture
 {
@@ -13,9 +13,9 @@ class YamlAclFixture extends AbstractFixture
     private $aclManager;
 
     /**
-     * @param AclManagerInterface $aclManager
+     * @param AclManager $aclManager
      */
-    public function setAclManager(AclManagerInterface $aclManager)
+    public function setAclManager(AclManager $aclManager)
     {
         $this->aclManager = $aclManager;
     }
